@@ -1,15 +1,204 @@
 {
   "store.home": { 
     "blocks": [
-      "rich-text"
+      "tab-layout#home",
+      "slider-layout#home",
+      "search-result-layout.customQuery#home"
     ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "VTEX Store Framework",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
+
+  // SLIDER LAYOUT 
+  
+  "slider-layout#home": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
+    },
+    "children": ["image#1", "image#2"]
+  },
+  "image#1": {
+    "props": {
+      "src": "https://res.cloudinary.com/dnaglzg7k/image/upload/v1629505350/banner1_lkpkve.png",
+      "maxHeight": 300
     }
+  },
+  "image#2": {
+    "props": {
+      "src": "https://res.cloudinary.com/dnaglzg7k/image/upload/v1629505352/banner2_vjwo2n.png",
+      "maxHeight": 300
+    }
+  },
+
+  // TAB LAYOUT COMPONENT
+
+  "tab-layout#home": {
+   "children": [
+     "tab-list#home"
+   ],
+   "props": {
+     "blockClass": "home",
+     "defaultActiveTabId": "home1"
   }
+ },
+ "tab-list#home": {
+     "children": [
+       "tab-list.item#home1",
+       "tab-list.item#home2",
+       "tab-list.item#home3",
+       "tab-list.item#home4",
+       "tab-list.item#home5",
+       "tab-list.item#home6",
+       "tab-list.item#home7",
+       "tab-list.item#home8",
+       "tab-list.item#home9",
+       "tab-list.item#home10"
+     ]
+   },
+  "tab-list.item#home1": {
+      "props": {
+        "tabId": "home1",
+        "label": "Promoção",
+        "defaultActiveTab": true
+      }
+    },
+  "tab-list.item#home2": {
+    "props": {
+      "tabId": "home1",
+      "label": "Palmeiras",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#home3": {
+    "props": {
+      "tabId": "home1",
+      "label": "Brasiliense",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#home4": {
+    "props": {
+      "tabId": "home1",
+      "label": "Chapecoense",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#home5": {
+    "props": {
+      "tabId": "home1",
+      "label": "Sport",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#home6": {
+    "props": {
+      "tabId": "home1",
+      "label": "Vasco",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#home7": {
+    "props": {
+      "tabId": "home1",
+      "label": "Bahia",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#home8": {
+    "props": {
+      "tabId": "home1",
+      "label": "Corinthians",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#home9": {
+    "props": {
+      "tabId": "home1",
+      "label": "Fluminense",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#home10": {
+    "props": {
+      "tabId": "home1",
+      "label": "Brasil",
+      "defaultActiveTab": true
+    }
+  },
+
+  // SEARCH RESULT 
+
+  "search-result-layout.customQuery#home": {
+    "props": {
+      "querySchema": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "skip",
+        "maxItemsPerPage": 10
+      }
+    },
+    "blocks": ["search-result-layout.desktop#tm", "search-result-layout.mobile"]
+  },
+  "search-result-layout.desktop#tm": {
+    "children": [
+      "search-content#tm"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+  },
+  "search-content#tm":{
+    "blocks":[
+      "gallery#tm", "not-found"
+    ]
+  },
+
+  // PRODUCT SUMMARY
+
+  "gallery#tm": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "(min-width:1300px)": 4,
+            "desktop": 3,
+            "tablet": 2,
+            "phone": 1
+          }
+        },
+        {
+          "name": "list",
+          "component": "ListSummary",
+          "itemsPerRow": 1
+        }
+      ],
+      "ListSummary": "product-summary.shelf#tm",
+      "GridSummary": "product-summary.shelf#tm"
+    }
+  },
+  "product-summary.shelf#tm": {
+    "children": [
+      "product-summary-name",
+      "product-images",
+      "product-summary-price",
+      "add-to-cart-button#add"
+    ]
+  },
+  
+    // ADD TO CART BUTTON
+
+    "add-to-cart-button#add": {
+      "props": {
+        "onClickBehavior": "add-to-cart",
+        "text": "adicionar ao carrinho"
+      }
+    }
+  
+  
 }

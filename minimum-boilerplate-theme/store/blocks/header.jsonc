@@ -25,25 +25,20 @@
       "fullWidth": true
     },
     "children": [
-      "flex-layout.col#logo",
+      "flex-layout.col#logo-desktop",
       "flex-layout.col#spacer",
       "search-bar",
-      "icon",
-      "flex-layout.col#spacer",
+      "locale-switcher",
+      "login",
       "minicart.v2"
     ]
-  },
-  "icon": {
-    "props": {
-      "id": "heart"
-    }
   },
   "flex-layout.col#spacer": {
     "props": {
       "width": "grow"
     }
   },
-  "flex-layout.col#logo": {
+  "flex-layout.col#logo-desktop": {
     "props": {
       "verticalAlign": "middle"
     },
@@ -51,10 +46,10 @@
   },
   "logo": {
     "props": {
-      "title": "UpMedal Logo",
+      "title": "Logo",
       "href": "/",
-      "url": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/upmedal.png",
-      "width": "100"
+      "url": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg",
+      "width": "80"
     }
   },
   "header-layout.mobile": {
@@ -66,7 +61,7 @@
   "flex-layout.row#mobile": {
     "children": [
       "drawer",
-      "flex-layout.col#logo",
+      "logo",
       "flex-layout.col#spacer",
       "login",
       "minicart.v2"
