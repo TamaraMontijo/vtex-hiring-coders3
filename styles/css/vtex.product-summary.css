@@ -1,3 +1,17 @@
 .element {
   background-color: #424242;
+  border-radius: 30px;
+}
+
+.sellingPrice {
+  color: white;
+}
+
+.brandName {
+  color: white;
+  padding: 0 20px;
+  display: block;
+  font-weight: 100;
+  font-size: 1.4rem;
+  height: 50px;
 }
