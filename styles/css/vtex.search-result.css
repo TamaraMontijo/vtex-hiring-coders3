@@ -1,0 +1,8 @@
+.gallery {
+  margin-bottom: 20px;
+}
+.galleryItem {
+  background-color: #424242;
+  border-radius: 30px;
+  margin: 10px;
+}
