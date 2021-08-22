@@ -14,12 +14,36 @@
   },
   "flex-layout.row#footer": { 
     "children": [
-      "rich-text#footer"
+      "flex-layout.col#spacer",
+      "rich-text#1",
+      "flex-layout.col#spacer",
+      "rich-text#2",
+      "flex-layout.col#spacer",
+      "rich-text#3",
+      "flex-layout.col#spacer",
+      "rich-text#4",
+      "flex-layout.col#spacer"
+
     ]
   },
-  "rich-text#footer": {
+  "rich-text#1": {
     "props": {
-      "text": "footer"
+      "text": "**Entrar**"
+    }
+  },
+  "rich-text#2": {
+    "props": {
+      "text": "**Desafios**"
+    }
+  },
+  "rich-text#3": {
+    "props": {
+      "text": "**Loja**"
+    }
+  },
+  "rich-text#4": {
+    "props": {
+      "text": "[**Suporte**](https://api.whatsapp.com/send?l=pt-BR&phone=5511964335064&text=Para%20falar%20com%20a%20Gabi%F0%9F%91%B1%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F%0A%0AClique%20enviar%F0%9F%91%89%0A%0A------------%0A*D%C3%BAvida%20sobre%3A*%20Etapa%20S%C3%A3o%20Jorge%20-%20Circuito%20Corinthians%0A*ID%3A*%2052292)"
     }
   }
 }
