@@ -136,9 +136,12 @@
   "search-result-layout.customQuery#home": {
     "props": {
       "querySchema": {
-        "skusFilter": "FIRST_AVAILABLE",
-        "simulationBehavior": "skip",
-        "maxItemsPerPage": 10
+        "orderByField": "OrderByTopSaleDESC",
+            "hideUnavailableItems": true,
+            "maxItemsPerPage": 8,
+            "queryField": "20,28",
+            "mapField": "c,c"
+        
       }
     },
     "blocks": ["search-result-layout.desktop#tm", "search-result-layout.mobile"]
