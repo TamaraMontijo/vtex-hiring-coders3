@@ -13,37 +13,68 @@
     ]
   },
   "flex-layout.row#footer": { 
+    "props": {
+      "blockClass": "section-footer"
+    },
     "children": [
-      "flex-layout.col#spacer",
-      "rich-text#1",
-      "flex-layout.col#spacer",
-      "rich-text#2",
-      "flex-layout.col#spacer",
-      "rich-text#3",
-      "flex-layout.col#spacer",
-      "rich-text#4",
-      "flex-layout.col#spacer"
-
+      "flex-layout.col#link1",
+      "flex-layout.col#link2",
+      "flex-layout.col#link3",
+      "flex-layout.col#link4"
     ]
   },
-  "rich-text#1": {
+  "flex-layout.col#link1":{
+    "children": [
+      "link#link1"
+    ]
+  },
+  "flex-layout.col#link2":{
+    "children": [
+      "link#link2"
+    ]
+  },
+  "flex-layout.col#link3":{
+    "children": [
+      "link#link3"
+    ]
+  },
+  "flex-layout.col#link4":{
+    "children": [
+      "link#link4"
+    ]
+  },
+
+  "link#link1": {
     "props": {
-      "text": "**Entrar**"
+      "blockClass": "link-footer-1",
+      "href": "/cadastro",
+      "label": "CADASTRO"
     }
   },
-  "rich-text#2": {
+
+  "link#link2": {
     "props": {
-      "text": "**Desafios**"
+      "blockClass": "link-footer-2",
+      "href": "#",
+      "label": "DESAFIOS"
     }
   },
-  "rich-text#3": {
+
+  "link#link3": {
     "props": {
-      "text": "**Loja**"
+      "blockClass": "link-footer-3",
+      "href": "#",
+      "label": "LOJA"
     }
   },
-  "rich-text#4": {
+
+  "link#link4": {
     "props": {
-      "text": "[**Suporte**](https://api.whatsapp.com/send?l=pt-BR&phone=5511964335064&text=Para%20falar%20com%20a%20Gabi%F0%9F%91%B1%F0%9F%8F%BB%E2%80%8D%E2%99%80%EF%B8%8F%0A%0AClique%20enviar%F0%9F%91%89%0A%0A------------%0A*D%C3%BAvida%20sobre%3A*%20Etapa%20S%C3%A3o%20Jorge%20-%20Circuito%20Corinthians%0A*ID%3A*%2052292)"
+      "blockClass": "link-footer-4",
+      "href": "https://api.whatsapp.com/send?phone=5511964335064",
+      "target": "_blank",
+      "label": "SUPORTE"
     }
   }
+
 }
