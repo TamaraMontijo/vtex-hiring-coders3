@@ -1,0 +1,15 @@
+.element :global(.vtex-button) {
+  margin: 0 auto;
+  border: 0;
+  background-color: #3eb200;
+}
+
+.element :global(.vtex-button):hover {
+  background-color: #3eb240;
+}
+
+.button {
+  margin: 0 auto;
+  border: 0;
+  background-color: #3eb200;
+}
