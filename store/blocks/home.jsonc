@@ -2,14 +2,29 @@
   "store.home": { 
     "blocks": [
       "tab-layout#home",
-      "slider-layout#home",
       "search-result-layout.customQuery#home"
     ]
   },
 
   // SLIDER LAYOUT 
-  
-  "slider-layout#home": {
+	
+	"list-context.image-list#demo": {
+    "children": ["slider-layout#demo-images"],
+    "props": {
+      "height": 720,
+      "images": [
+        {
+          "image": "https://res.cloudinary.com/dnaglzg7k/image/upload/v1629505350/banner1_lkpkve.png",
+          "mobileImage": "https://res.cloudinary.com/dnaglzg7k/image/upload/v1629505350/banner1_lkpkve.png"
+        },
+        {
+          "image": "https://res.cloudinary.com/dnaglzg7k/image/upload/v1629505352/banner2_vjwo2n.png",
+          "mobileImage": "https://res.cloudinary.com/dnaglzg7k/image/upload/v1629505352/banner2_vjwo2n.png"
+        }
+      ]
+    }
+  },
+  "slider-layout#demo-images": {
     "props": {
       "itemsPerPage": {
         "desktop": 1,
@@ -19,19 +34,6 @@
       "infinite": true,
       "showNavigationArrows": "desktopOnly",
       "blockClass": "carousel"
-    },
-    "children": ["image#1", "image#2"]
-  },
-  "image#1": {
-    "props": {
-      "src": "https://res.cloudinary.com/dnaglzg7k/image/upload/v1629505350/banner1_lkpkve.png",
-      "maxHeight": 300
-    }
-  },
-  "image#2": {
-    "props": {
-      "src": "https://res.cloudinary.com/dnaglzg7k/image/upload/v1629505352/banner2_vjwo2n.png",
-      "maxHeight": 300
     }
   },
 
@@ -39,7 +41,8 @@
 
   "tab-layout#home": {
    "children": [
-     "tab-list#home"
+     "tab-list#home",
+     "list-context.image-list#demo"
    ],
    "props": {
      "blockClass": "home",
@@ -137,10 +140,10 @@
     "props": {
       "querySchema": {
         "orderByField": "OrderByTopSaleDESC",
-            "hideUnavailableItems": true,
-            "maxItemsPerPage": 8,
-            "queryField": "20,28",
-            "mapField": "c,c"
+        "hideUnavailableItems": true,
+        "maxItemsPerPage": 8,
+        "queryField": "20,28",
+        "mapField": "c,c"
         
       }
     },
@@ -202,6 +205,5 @@
         "text": "adicionar ao carrinho"
       }
     }
-  
   
 }
